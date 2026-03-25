@@ -228,6 +228,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5895,
     lng: 120.9710,
     category: "gate",
+    youtubeId: "8uqmSt8IFc8",
     translations: {
       en: {
         name: "Puerta Real",
