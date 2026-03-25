@@ -27,6 +27,7 @@ export const uiTranslations: Record<Language, {
   history: string;
   clickHint: string;
   close: string;
+  watchVideo: string;
   categories: Record<string, string>;
 }> = {
   en: {
@@ -37,6 +38,7 @@ export const uiTranslations: Record<Language, {
     history: "Historical Background",
     clickHint: "Click a marker on the map for details",
     close: "Close",
+    watchVideo: "Watch Video",
     categories: { fortress: "Fortress", church: "Church", historic: "Historic Site", plaza: "Plaza", gate: "Gate" },
   },
   tl: {
