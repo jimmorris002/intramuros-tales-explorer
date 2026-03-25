@@ -112,6 +112,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5918,
     lng: 120.9736,
     category: "church",
+    youtubeId: "R73sSrnkdbE",
     translations: {
       en: {
         name: "Manila Cathedral",
