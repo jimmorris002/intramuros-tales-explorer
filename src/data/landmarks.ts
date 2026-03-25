@@ -27,6 +27,7 @@ export const uiTranslations: Record<Language, {
   history: string;
   clickHint: string;
   close: string;
+  watchVideo: string;
   categories: Record<string, string>;
 }> = {
   en: {
@@ -37,6 +38,7 @@ export const uiTranslations: Record<Language, {
     history: "Historical Background",
     clickHint: "Click a marker on the map for details",
     close: "Close",
+    watchVideo: "Watch Video",
     categories: { fortress: "Fortress", church: "Church", historic: "Historic Site", plaza: "Plaza", gate: "Gate" },
   },
   tl: {
@@ -47,6 +49,7 @@ export const uiTranslations: Record<Language, {
     history: "Kasaysayan",
     clickHint: "Pindutin ang marker sa mapa para sa detalye",
     close: "Isara",
+    watchVideo: "Panoorin",
     categories: { fortress: "Kuta", church: "Simbahan", historic: "Makasaysayang Lugar", plaza: "Plasa", gate: "Pintuan" },
   },
   es: {
@@ -57,6 +60,7 @@ export const uiTranslations: Record<Language, {
     history: "Historia",
     clickHint: "Haga clic en un marcador del mapa para ver detalles",
     close: "Cerrar",
+    watchVideo: "Ver Video",
     categories: { fortress: "Fortaleza", church: "Iglesia", historic: "Sitio Histórico", plaza: "Plaza", gate: "Puerta" },
   },
   zh: {
@@ -67,6 +71,7 @@ export const uiTranslations: Record<Language, {
     history: "历史背景",
     clickHint: "点击地图上的标记查看详情",
     close: "关闭",
+    watchVideo: "观看视频",
     categories: { fortress: "堡垒", church: "教堂", historic: "历史遗址", plaza: "广场", gate: "城门" },
   },
 };
