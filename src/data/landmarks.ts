@@ -60,6 +60,7 @@ export const uiTranslations: Record<Language, {
     history: "Historia",
     clickHint: "Haga clic en un marcador del mapa para ver detalles",
     close: "Cerrar",
+    watchVideo: "Ver Video",
     categories: { fortress: "Fortaleza", church: "Iglesia", historic: "Sitio Histórico", plaza: "Plaza", gate: "Puerta" },
   },
   zh: {
