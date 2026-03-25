@@ -39,7 +39,7 @@ const LandmarkPopup = ({ landmark, language, onClose }: LandmarkPopupProps) => {
           <div className="w-12 h-12 rounded-full bg-primary/80 group-hover:bg-primary flex items-center justify-center transition-colors shadow-lg">
             <Play className="w-5 h-5 text-primary-foreground ml-0.5" />
           </div>
-          <span className="text-xs font-medium text-muted-foreground">{ui.watchVideo ?? "Watch Video"}</span>
+          <span className="text-xs font-medium text-muted-foreground">{ui.watchVideo}</span>
         </div>
       </div>
 
