@@ -1,16 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import MapSidebar from "@/components/MapSidebar";
+import IntramurosMap from "@/components/IntramurosMap";
+import { Language, type Landmark } from "@/data/landmarks";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [language, setLanguage] = useState<Language>("en");
+  const [activeLandmark, setActiveLandmark] = useState<Landmark | null>(null);
+
+  const handleLandmarkClick = (landmark: Landmark) => {
+    setActiveLandmark(landmark);
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="flex h-screen w-screen overflow-hidden">
+      <MapSidebar
+        language={language}
+        onLanguageChange={setLanguage}
+        activeLandmark={activeLandmark?.id ?? null}
+        onLandmarkClick={handleLandmarkClick}
+      />
+      <main className="flex-1 relative">
+        <IntramurosMap
+          language={language}
+          activeLandmark={activeLandmark}
+          onLandmarkSelect={setActiveLandmark}
+        />
+      </main>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
