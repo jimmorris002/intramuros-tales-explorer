@@ -199,6 +199,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5862,
     lng: 120.9725,
     category: "fortress",
+    youtubeId: "lTdxcGo9w-4",
     translations: {
       en: {
         name: "Baluarte de San Diego",
