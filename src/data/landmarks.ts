@@ -71,6 +71,7 @@ export const uiTranslations: Record<Language, {
     history: "历史背景",
     clickHint: "点击地图上的标记查看详情",
     close: "关闭",
+    watchVideo: "观看视频",
     categories: { fortress: "堡垒", church: "教堂", historic: "历史遗址", plaza: "广场", gate: "城门" },
   },
 };
