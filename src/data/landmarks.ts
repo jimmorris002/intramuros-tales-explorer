@@ -5,6 +5,7 @@ export interface Landmark {
   lat: number;
   lng: number;
   category: "fortress" | "church" | "historic" | "plaza" | "gate";
+  youtubeId: string;
   translations: Record<Language, {
     name: string;
     description: string;
@@ -82,6 +83,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5952,
     lng: 120.9724,
     category: "fortress",
+    youtubeId: "ogE_ZeKzJ2k",
     translations: {
       en: {
         name: "Fort Santiago",
@@ -110,6 +112,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5918,
     lng: 120.9736,
     category: "church",
+    youtubeId: "R73sSrnkdbE",
     translations: {
       en: {
         name: "Manila Cathedral",
@@ -138,6 +141,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5889,
     lng: 120.9750,
     category: "church",
+    youtubeId: "QY1LkB_P51s",
     translations: {
       en: {
         name: "San Agustin Church",
@@ -166,6 +170,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5882,
     lng: 120.9745,
     category: "historic",
+    youtubeId: "RJ9lFhOUn2Y",
     translations: {
       en: {
         name: "Casa Manila",
@@ -194,6 +199,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5862,
     lng: 120.9725,
     category: "fortress",
+    youtubeId: "lTdxcGo9w-4",
     translations: {
       en: {
         name: "Baluarte de San Diego",
@@ -222,6 +228,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5895,
     lng: 120.9710,
     category: "gate",
+    youtubeId: "8uqmSt8IFc8",
     translations: {
       en: {
         name: "Puerta Real",
@@ -250,6 +257,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5912,
     lng: 120.9738,
     category: "plaza",
+    youtubeId: "vA81h7a6LCs",
     translations: {
       en: {
         name: "Plaza Roma",
@@ -278,6 +286,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5935,
     lng: 120.9700,
     category: "fortress",
+    youtubeId: "ogE_ZeKzJ2k",
     translations: {
       en: {
         name: "Revellin de Recoletos",
@@ -306,6 +315,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5930,
     lng: 120.9745,
     category: "historic",
+    youtubeId: "MvE6AiSsvvg",
     translations: {
       en: {
         name: "Palacio del Gobernador",
@@ -334,6 +344,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5870,
     lng: 120.9770,
     category: "gate",
+    youtubeId: "8uqmSt8IFc8",
     translations: {
       en: {
         name: "Puerta de Isabel II",

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Language, uiTranslations, type Landmark } from "@/data/landmarks";
-import { Play } from "lucide-react";
 
 interface LandmarkPopupProps {
   landmark: Landmark;
@@ -32,15 +31,15 @@ const LandmarkPopup = ({ landmark, language, onClose }: LandmarkPopupProps) => {
         </button>
       </div>
 
-      {/* Video Placeholder */}
-      <div className="mx-5 mb-3 rounded-lg overflow-hidden aspect-video bg-muted flex items-center justify-center relative cursor-pointer group">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
-        <div className="relative z-10 flex flex-col items-center gap-1.5">
-          <div className="w-12 h-12 rounded-full bg-primary/80 group-hover:bg-primary flex items-center justify-center transition-colors shadow-lg">
-            <Play className="w-5 h-5 text-primary-foreground ml-0.5" />
-          </div>
-          <span className="text-xs font-medium text-muted-foreground">{ui.watchVideo}</span>
-        </div>
+      {/* YouTube Video Embed */}
+      <div className="mx-5 mb-3 rounded-lg overflow-hidden aspect-video bg-muted">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${landmark.youtubeId}?rel=0`}
+          title={t.name}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full border-0"
+        />
       </div>
 
       {/* Description */}
