@@ -257,6 +257,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5912,
     lng: 120.9738,
     category: "plaza",
+    youtubeId: "vA81h7a6LCs",
     translations: {
       en: {
         name: "Plaza Roma",
