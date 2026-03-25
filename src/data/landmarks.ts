@@ -49,6 +49,7 @@ export const uiTranslations: Record<Language, {
     history: "Kasaysayan",
     clickHint: "Pindutin ang marker sa mapa para sa detalye",
     close: "Isara",
+    watchVideo: "Panoorin",
     categories: { fortress: "Kuta", church: "Simbahan", historic: "Makasaysayang Lugar", plaza: "Plasa", gate: "Pintuan" },
   },
   es: {
