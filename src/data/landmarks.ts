@@ -141,6 +141,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5889,
     lng: 120.9750,
     category: "church",
+    youtubeId: "QY1LkB_P51s",
     translations: {
       en: {
         name: "San Agustin Church",
