@@ -315,6 +315,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5930,
     lng: 120.9745,
     category: "historic",
+    youtubeId: "MvE6AiSsvvg",
     translations: {
       en: {
         name: "Palacio del Gobernador",
