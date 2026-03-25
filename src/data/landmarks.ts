@@ -5,6 +5,7 @@ export interface Landmark {
   lat: number;
   lng: number;
   category: "fortress" | "church" | "historic" | "plaza" | "gate";
+  youtubeId: string;
   translations: Record<Language, {
     name: string;
     description: string;
