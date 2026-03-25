@@ -170,6 +170,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5882,
     lng: 120.9745,
     category: "historic",
+    youtubeId: "RJ9lFhOUn2Y",
     translations: {
       en: {
         name: "Casa Manila",
