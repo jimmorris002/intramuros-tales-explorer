@@ -286,6 +286,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5935,
     lng: 120.9700,
     category: "fortress",
+    youtubeId: "ogE_ZeKzJ2k",
     translations: {
       en: {
         name: "Revellin de Recoletos",
