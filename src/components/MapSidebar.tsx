@@ -15,6 +15,15 @@ const categoryIcons: Record<string, string> = {
   gate: "🚪",
 };
 
+const AdPlaceholder = ({ position }: { position: number }) => (
+  <div className="mx-3 my-2 rounded-lg overflow-hidden border border-dashed flex flex-col items-center justify-center py-4 px-3 gap-1" style={{ borderColor: "hsl(var(--sidebar-hover))", background: "hsl(var(--sidebar-hover) / 0.4)" }}>
+    <span className="text-[10px] font-semibold uppercase tracking-widest opacity-40">Ad</span>
+    <div className="w-full aspect-[3/1] rounded bg-gradient-to-r from-primary/10 to-accent/10 flex items-center justify-center">
+      <span className="text-xs opacity-30">Advertisement {position}</span>
+    </div>
+  </div>
+);
+
 const MapSidebar = ({ language, onLanguageChange, activeLandmark, onLandmarkClick }: MapSidebarProps) => {
   const ui = uiTranslations[language];
 
@@ -49,29 +58,33 @@ const MapSidebar = ({ language, onLanguageChange, activeLandmark, onLandmarkClic
         <h2 className="text-xs font-semibold uppercase tracking-wider opacity-60">{ui.landmarks}</h2>
       </div>
       <nav className="flex-1 overflow-y-auto px-2 pb-4 space-y-0.5">
-        {landmarks.map((lm) => {
-          const isActive = activeLandmark === lm.id;
-          return (
+        {landmarks.map((lm, index) => (
+          <div key={lm.id}>
             <button
-              key={lm.id}
               onClick={() => onLandmarkClick(lm)}
               className="w-full text-left px-3 py-2.5 rounded-md text-sm font-medium transition-colors flex items-center gap-2"
               style={{
-                background: isActive ? "hsl(var(--landmark-active))" : "transparent",
-                color: isActive ? "hsl(0 0% 100%)" : "hsl(var(--sidebar-fg))",
+                background: activeLandmark === lm.id ? "hsl(var(--landmark-active))" : "transparent",
+                color: activeLandmark === lm.id ? "hsl(0 0% 100%)" : "hsl(var(--sidebar-fg))",
               }}
               onMouseEnter={(e) => {
-                if (!isActive) e.currentTarget.style.background = "hsl(var(--sidebar-hover))";
+                if (activeLandmark !== lm.id) e.currentTarget.style.background = "hsl(var(--sidebar-hover))";
               }}
               onMouseLeave={(e) => {
-                if (!isActive) e.currentTarget.style.background = "transparent";
+                if (activeLandmark !== lm.id) e.currentTarget.style.background = "transparent";
               }}
             >
               <span>{categoryIcons[lm.category]}</span>
               <span className="truncate">{lm.translations[language].name}</span>
             </button>
-          );
-        })}
+
+            {/* Ad after every 4th landmark */}
+            {(index + 1) % 4 === 0 && <AdPlaceholder position={Math.floor((index + 1) / 4)} />}
+          </div>
+        ))}
+
+        {/* Bottom ad */}
+        <AdPlaceholder position={0} />
       </nav>
 
       {/* Footer hint */}
