@@ -344,6 +344,7 @@ export const landmarks: Landmark[] = [
     lat: 14.5870,
     lng: 120.9770,
     category: "gate",
+    youtubeId: "8uqmSt8IFc8",
     translations: {
       en: {
         name: "Puerta de Isabel II",
